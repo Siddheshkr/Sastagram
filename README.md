@@ -1,2 +1,2 @@
-# sastagram
+# Sastagram
 instagram look alike clone
