@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+  background: #833ab4;
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+}
+.card {
+  height: 650px;
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 2px 5px 8px;
+  transition: all ease-in 0.5ms;
+}
+.story-sec {
+  white-space: nowrap;
+  width: 100%;
+  height: 120px;
+  border-bottom: 0.5px solid gray;
+
+  padding: 5px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.story-sec::-webkit-scrollbar {
+  display: none;
+}
+
+.story {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 3px solid rgb(213, 10, 10);
+  margin: 5px;
+  display: inline-block;
+  overflow: hidden;
+}
+.story img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.fullscrn {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  display: none;
+  transition: all ease-in 0.5s;
+}
+
+.post-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  /* background-color: #fd1d1d; */
+  overflow-y: scroll;
+}
+.post-sec::-webkit-scrollbar {
+  display: none;
+}
+.posts {
+  width: 350px;
+  height: 400px;
+  margin-top: 10px;
+  background-color: #333232;
+  border-radius: 5px;
+  
+}
+
+.posts img {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  border-radius: 5px;
+
+  
+}
+.posts i {
+  margin-left: 5px;
+  font-size: 28px;
+  color: #ffffff;
+  transition: all ease 0.5s;
+}
+#imglove {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0.5;
+  transition: all ease 0.5s;
+}
