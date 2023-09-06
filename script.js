@@ -31,6 +31,7 @@ let post = document.querySelector(".posts");
 let love = document.querySelector("#imglove");
 let lovebtn = document.querySelector("#lovebtn");
 let title = document.querySelector(".title");
+let cmnt = document.querySelector("#cmnt");
 
 // story section-->>
 var clutter = "";
@@ -46,16 +47,20 @@ stories.addEventListener("click", function (dets) {
   preview.style.display = "block";
   post.style.display = "none";
   title.style.display = "none";
+  cmnt.style.display = "none";
   preview.style.backgroundImage = `url(${arr[dets.target.id].story})`;
 
   setTimeout(function () {
     preview.style.display = "none";
     post.style.display = "block";
     title.style.display = "block";
+    cmnt.style.display = "block";
   }, 2500);
   preview.addEventListener("dblclick", (e) => {
     preview.style.display = "none";
     post.style.display = "block";
+    title.style.display = "block";
+    cmnt.style.display = "block";
   });
 });
 
@@ -63,8 +68,11 @@ stories.addEventListener("click", function (dets) {
 post.addEventListener("dblclick", (e) => {
   love.style.transform = " translate(-50%, -50%) scale(3)";
   lovebtn.style.color = "#e20909";
+  lovebtn.style.transform = "scale(1.2)";
+
   setTimeout((e) => {
     love.style.transform = " translate(-50%, -50%) scale(0)";
+    lovebtn.style.transform = "scale(1)";
   }, 1000);
 });
 
@@ -73,6 +81,7 @@ lovebtn.addEventListener("click", (e) => {
   if (check == 0) {
     love.style.transform = " translate(-50%, -50%) scale(2)";
     lovebtn.style.color = "#e20909";
+
     setTimeout((e) => {
       love.style.transform = " translate(-50%, -50%) scale(0)";
     }, 1000);

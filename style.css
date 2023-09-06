@@ -3,7 +3,15 @@
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
+
 html,
 body {
   margin: 0;
@@ -17,6 +25,7 @@ body {
   padding: 0px;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   background: #833ab4;
   background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
   background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
@@ -28,9 +37,12 @@ body {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  box-shadow: 2px 5px 8px;
+  box-shadow: 2px 5px 10px;
   transition: all ease-in 0.5ms;
 }
+
+/* story CSS -->> */
+
 .story-sec {
   white-space: nowrap;
   width: 100%;
@@ -55,7 +67,13 @@ body {
   box-shadow: 3px 3px 10px;
   overflow: hidden;
   cursor: pointer;
+  transition: all ease-in 0.4s;
 }
+
+.story:hover {
+  box-shadow: 1px 1px 15px red;
+}
+
 .story img {
   height: 100%;
   width: 100%;
@@ -73,18 +91,16 @@ body {
   cursor: pointer;
 }
 
+/* Posts CSS:---> */
+
 .post-sec {
   display: flex;
   flex-direction: column;
   gap: 5px;
   width: 100%;
-  height: 100%;
   align-items: center;
-  overflow-y: scroll;
 }
-.post-sec::-webkit-scrollbar {
-  display: none;
-}
+
 .posts {
   width: 380px;
   height: 450px;
@@ -92,9 +108,13 @@ body {
   background: #8e2de2;
   background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
   background: linear-gradient(to right, #4a00e0, #8e2de2);
-
   border-radius: 5px;
   box-shadow: 2px 2px 5px;
+  transition: all ease-in-out 0.4s;
+}
+
+.posts:hover {
+  box-shadow: 1px 1px 15px #8e2de2;
 }
 
 .posts img {
@@ -105,10 +125,10 @@ body {
   cursor: pointer;
 }
 .posts i {
-  margin-left: 5px;
-  font-size: 28px;
+  margin-left: 8px;
+  font-size: 29px;
   color: #ffffff;
-  transition: all ease 0.5s;
+  transition: all ease-in-out 0.4s;
 }
 #imglove {
   position: absolute;
@@ -116,20 +136,62 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   opacity: 0.5;
-  transition: all ease 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+#lovebtn:hover {
+  color: red;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+form {
+  position: relative;
+  width: 95%;
 }
 
 input {
-  width: 95%;
+  width: 100%;
   height: 35px;
-  border: 3px solid rgb(5, 72, 172);
+  border: 3px solid rgb(1, 74, 184);
   border-radius: 30px;
   box-shadow: 2px 2px 5px;
   margin-top: 2px;
+  font-size: medium;
+  font-weight: 500;
+  transition: all ease-in-out 0.4s;
+  margin-bottom: 2px;
+}
+
+input:hover {
+  box-shadow: 1px 1px 15px rgb(1, 74, 184);
+}
+
+input :focus {
+  outline: none;
+}
+
+button {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 40px;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: larger;
+  font-weight: 700;
+  margin: 2px;
+  transition: all ease-in-out 0.4s;
+}
+button:hover {
+  color: #4c05da;
+  transform: scale(1.2);
 }
 
 span {
-  margin: 1px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -137,5 +199,38 @@ span {
 #logo {
   margin-left: 5px;
   cursor: pointer;
+}
 
+#footer {
+  color: rgb(41, 39, 39);
+  width: 105%;
+  display: none;
+  font-size: smaller;
+  font-weight: 200;
+  text-align: center;
+  background: none;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 425px) {
+  .card {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0px;
+    padding-inline: 2px;
+  }
+  .posts {
+    max-width: 95%;
+  }
+  .post-sec {
+    gap: 10px;
+  }
+
+  input {
+    height: 50px;
+    margin-bottom: 5px;
+  }
+  #footer {
+    display: block;
+  }
 }
