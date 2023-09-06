@@ -1,4 +1,4 @@
-# Sastagram - Instagram-Like Web Application
+# Sastagram - Instagram-Like Web Application 🔥
 
 
 ![sastagramGIF](https://github.com/Siddheshkr/Sastagram/assets/84951276/26749cf9-fbba-4175-9324-ce514c75edc2)
